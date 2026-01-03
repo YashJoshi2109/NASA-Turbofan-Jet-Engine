@@ -50,13 +50,6 @@
    - Built predicted vs. actual RUL comparison charts
    - Generated feature distribution and importance visualizations
 
-### 8. **Technical Problem-Solving**
-   - Resolved Python version compatibility issues (3.14 → 3.11 for TensorFlow)
-   - Fixed XGBoost OpenMP runtime dependencies
-   - Automated dataset download and environment setup
-   - Debugged array conversion errors and data type issues
-
----
 
 ## 🛠️ TECHNICAL SKILLS DEMONSTRATED
 
