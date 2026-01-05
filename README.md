@@ -1,6 +1,7 @@
 # NASA Turbofan Engine Degradation – RUL Prediction
 
 > Streamlit app for predicting Remaining Useful Life (RUL) of turbofan engines using the NASA C-MAPSS FD001 dataset. B
+> Live App: https://nasa-turbofan-engine-degradation-simulation.streamlit.app
 
 ## What’s inside
 - Interactive Streamlit frontend (EDA, feature engineering, regression/classification models, comparisons, predictions)
