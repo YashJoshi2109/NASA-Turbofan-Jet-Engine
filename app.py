@@ -88,11 +88,11 @@ def load_data():
         col_names = index_names + setting_names + sensor_names
         
         # Load data
-        train = pd.read_csv(f'{data_path}/train_FD001.txt', sep='\s+', header=None, 
+        train = pd.read_csv(f'{data_path}/train_FD001.txt', sep=r'\s+', header=None, 
                            index_col=False, names=col_names)
-        valid = pd.read_csv(f'{data_path}/test_FD001.txt', sep='\s+', header=None, 
+        valid = pd.read_csv(f'{data_path}/test_FD001.txt', sep=r'\s+', header=None, 
                            index_col=False, names=col_names)
-        y_valid = pd.read_csv(f'{data_path}/RUL_FD001.txt', sep='\s+', header=None, 
+        y_valid = pd.read_csv(f'{data_path}/RUL_FD001.txt', sep=r'\s+', header=None, 
                              index_col=False, names=['RUL'])
         
         return train, valid, y_valid
@@ -232,6 +232,24 @@ page = st.sidebar.radio(
 if page == "🏠 Home":
     st.markdown('<div class="main-header">NASA Predictive Maintenance System</div>', unsafe_allow_html=True)
     st.markdown("### Remaining Useful Life (RUL) Prediction for Turbofan Engines")
+
+    repo_url = "https://github.com/YashJoshi2109/NASA-Turbofan-Engine-Degradation-Simulation"
+    kaggle_url = "https://www.kaggle.com/datasets/behrad3d/nasa-cmaps"
+
+    st.markdown(
+        f"""
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:10px;">
+            <a href="{repo_url}" target="_blank" style="text-decoration:none;">
+                <button style="background-color:#1f77b4; color:white; border:none; padding:8px 12px; border-radius:6px;">GitHub Repository</button>
+            </a>
+            <a href="{kaggle_url}" target="_blank" style="text-decoration:none;">
+                <button style="background-color:#ff7f0e; color:white; border:none; padding:8px 12px; border-radius:6px;">Kaggle Dataset</button>
+            </a>
+            <span style="font-weight:600; color:#444;">Made by Yash Joshi</span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
     
     col1, col2, col3 = st.columns(3)
     
@@ -1355,4 +1373,10 @@ st.sidebar.markdown("""
 Built with Streamlit for Remaining Useful Life (RUL) prediction of turbofan engines.
 
 **Dataset:** NASA C-MAPSS FD001
+            
+**GitHub:** [YashJoshi2109/NASA-Turbofan-Engine-Degradation-Simulation](https://github.com/YashJoshi2109/NASA-Turbofan-Engine-Degradation-Simulation)
+
+**Kaggle:** [NASA C-MAPSS Dataset](https://www.kaggle.com/datasets/behrad3d/nasa-cmaps)
+
+**Made by:** Yash Joshi
 """)
